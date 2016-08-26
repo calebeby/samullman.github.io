@@ -122,7 +122,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json
   middleman (>= 4.0.0)
+  middleman-cli
   middleman-gh-pages
   middleman-livereload
   middleman-minify-html

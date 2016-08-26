@@ -11,7 +11,9 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
+gem 'middleman-cli'
 gem 'slim'
+gem 'json'
 gem "middleman-syntax"
 gem "redcarpet"
 gem 'middleman-gh-pages'
