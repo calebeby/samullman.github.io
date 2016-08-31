@@ -1,0 +1,97 @@
+body-background = #f7f7f7
+
+red    = #B03060
+orange = #FE9A76
+yellow = #FFD700
+olive  = #32CD32
+green  = #016936
+teal   = #008080
+blue   = #0E6EB8
+violet = #EE82EE
+purple = #B413EC
+pink   = #FF1493
+brown  = #A52A2A
+grey   = #A0A0A0
+black  = #000000
+
+colors = red orange yellow olive green teal blue violet purple pink brown grey black 
+
+@require 'jeet'
+@require 'rupture'
+@require 'helpers'
+jeet.gutter = 4
+
+*, *::before, *::after
+  box-sizing: border-box
+
+h4, p
+  margin: 0
+
+section
+  overflow: hidden
+  margin: 20px 0
+  padding: 2px
+  padding-bottom: 15px
+  border-bottom: 1px solid rgba(0, 0, 0, .1)
+
+h3
+  margin: 10px 0
+
+body
+  width: 50%
+  min-width: 500px
+  max-width: 100%
+  background: body-background
+  color: rgba(0, 0, 0, .8)
+  center()
+
+header nav
+  ul, li
+    display: inline
+
+
+section.about
+  p
+    margin: 0
+    col(3/4)
+
+  img
+    col(1/4)
+  
+section.experience
+  ul
+    no-dot()
+
+  li
+    box-shadow: 0 0 0 1px rgba(39, 41, 43, .15), 0 1px 4px 0 rgba(0, 0, 0, .15)
+    background: white
+    padding: 15px
+    margin: 15px 0
+    corners()
+    
+    for child in (1..10)
+      &:nth-of-type({child})
+        top-highlight-color: colors[child - 1]
+
+section.education
+
+  ul
+    no-dot()
+
+  li
+    col(1/2, cycle: 2)
+    corners()
+    background: white
+    padding: 15px
+    box-shadow: 0 3px 0 0 #d4d4d5,0 0 0 1px #d4d4d5
+  
+  h4
+    margin-bottom: 10px
+
+  .description
+    font-size: 12px
+    color: rgba(0, 0, 0, .4)
+
+  .gpa, .fact
+    font-size: 14px
+    font-weight: 600
