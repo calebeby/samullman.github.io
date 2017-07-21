@@ -20,7 +20,7 @@
     "brunch": "^2.8.2",
     "rupture": "^0.6.1",
     "coffee-script-brunch": "^2.0.0",
-    "jeet": "6.1.2",
+    "jeet": "7.1.0",
     "stylus-brunch": "^2.7.2"
   }
 }
